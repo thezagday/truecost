@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the bids for the user.
+     */
+    public function bids()
+    {
+        return $this->hasMany('App\Bid');
+    }
 }
