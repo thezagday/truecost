@@ -34,4 +34,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Bid');
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class,'users_roles');
+    }
 }
