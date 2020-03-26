@@ -17,4 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::resource('bids', 'BidController');
+    Route::resource('categories', 'CategoryController');
+    Route::resource('deals', 'DealController');
+    Route::resource('levels', 'LevelController');
+    Route::resource('lots', 'LotController');
+    Route::resource('orders', 'OrderController');
+    Route::resource('reviews', 'ReviewController');
+    Route::resource('users', 'UserController');
+});
