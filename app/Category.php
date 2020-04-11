@@ -13,6 +13,8 @@ class Category extends Model
      */
     protected $table = 'categories';
 
+    protected $fillable = ['title', 'description'];
+
     /**
      * Get all bids by category.
      */

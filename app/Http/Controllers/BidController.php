@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class BidController extends Controller
 {
-    /**
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $bids = Bid::orderBy('id', 'desc')
@@ -18,9 +15,6 @@ class BidController extends Controller
         return view('bids.index')->with('bids', $bids);
     }
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('bids.create');
@@ -32,12 +26,13 @@ class BidController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
-        ]);
+       try {
+           Bid::create($request->all());
+       } catch (\Exception $e) {
+           dd($e);
+       }
 
-        Bid::create($request->all());
+
 
         return redirect()->route('bid.index')
             ->with('success','Bid created successfully.');
