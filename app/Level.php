@@ -13,6 +13,8 @@ class Level extends Model
      */
     protected $table = 'levels';
 
+    protected $fillable = ['title', 'description'];
+
     /**
      * Get all bids by level.
      */
