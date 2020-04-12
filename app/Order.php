@@ -13,6 +13,8 @@ class Order extends Model
      */
     protected $table = 'orders';
 
+    protected $fillable = ['cost', 'bid_id'];
+
     /**
      * Get the based bid.
      */

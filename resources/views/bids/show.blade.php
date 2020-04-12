@@ -17,15 +17,15 @@
                                 <input type="text" name="description" class="form-control" id="description" placeholder="Description" value="{{ $bid->description }}">
                             </div>
                             <div class="form-group">
-                                <label for="title">User</label>
+                                <label for="user">User</label>
                                 <input type="text" name="user" class="form-control" id="user" placeholder="User" value="{{ $bid->user->name }}">
                             </div>
                             <div class="form-group">
-                                <label for="title">Level</label>
+                                <label for="level">Level</label>
                                 <input type="text" name="level" class="form-control" id="level" placeholder="Level" value="{{ $bid->level->title }}">
                             </div>
                             <div class="form-group">
-                                <label for="title">Category</label>
+                                <label for="category">Category</label>
                                 <input type="text" name="category" class="form-control" id="category" placeholder="Category" value="{{ $bid->category->title }}">
                             </div>
                         </form>

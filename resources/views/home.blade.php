@@ -22,6 +22,9 @@
                         <h2>
                             <bold><a href="{{ route('bids.index') }}">Bids</a></bold>
                         </h2>
+                        <h2>
+                            <bold><a href="{{ route('orders.index') }}">Orders</a></bold>
+                        </h2>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@
                                 <label for="level">Level</label>
                                 <select class="form-control" id="level" name="level_id">
                                     @foreach($levels as $level)
-                                        <option value="{{ $level->id }}" @if ($level->id == $bid->level_id) {{ 'selected' }} @endif>{{ $level->title }}</option>
+                                        <option value="{{ $level->id }}" @if ($level->id == $bid->level->id) {{ 'selected' }} @endif>{{ $level->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -30,7 +30,7 @@
                                 <label for="category">Category</label>
                                 <select class="form-control" id="category" name="category_id">
                                     @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" @if ($category->id == $bid->category_id) {{ 'selected' }} @endif>{{ $category->title }}</option>
+                                        <option value="{{ $category->id }}" @if ($category->id == $bid->category->id) {{ 'selected' }} @endif>{{ $category->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
