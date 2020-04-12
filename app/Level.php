@@ -20,6 +20,6 @@ class Level extends Model
      */
     public function bids()
     {
-        return $this->belongsTo('App\Bid');
+        return $this->hasMany('App\Bid');
     }
 }

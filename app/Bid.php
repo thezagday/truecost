@@ -13,6 +13,8 @@ class Bid extends Model
      */
     protected $table = 'bids';
 
+    protected $fillable = ['title', 'description', 'user_id', 'level_id', 'category_id'];
+
     /**
      * Get the user that owns the bid.
      */
@@ -34,7 +36,7 @@ class Bid extends Model
      */
     public function level()
     {
-        return $this->hasOne('App\Level');
+        return $this->belongsTo('App\Level');
     }
 
     /**
@@ -42,6 +44,6 @@ class Bid extends Model
      */
     public function category()
     {
-        return $this->hasOne('App\Category');
+        return $this->belongsTo('App\Category');
     }
 }

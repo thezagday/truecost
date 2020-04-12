@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Bid;
+use App\Category;
+use App\Level;
 use Illuminate\Http\Request;
 
 class BidController extends Controller
@@ -17,67 +19,58 @@ class BidController extends Controller
 
     public function create()
     {
-        return view('bids.create');
+        $currentUserId = auth()->user()->id;
+        $levels = Level::all();
+        $categories = Category::all();
+
+        return view('bids.create', [
+            'levels' => $levels,
+            'categories' => $categories,
+            'current_user_id' => $currentUserId,
+        ]);
     }
 
-    /**
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-       try {
-           Bid::create($request->all());
-       } catch (\Exception $e) {
-           dd($e);
-       }
+        try {
+            Bid::create($request->all());
+        } catch (\Exception $e) {
+            dd($e);
+        }
 
-
-
-        return redirect()->route('bid.index')
+        return redirect()->route('bids.index')
             ->with('success','Bid created successfully.');
     }
 
-    /**
-     * @param  Bid $bid
-     * @return \Illuminate\Http\Response
-     */
     public function show(Bid $bid)
     {
         return view('bids.show', compact('bid'));
     }
 
-    /**
-     * @param  Bid $bid
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Bid $bid)
     {
-        return view('bids.edit', compact('bid'));
+        $levels = Level::all();
+        $categories = Category::all();
+
+        return view('bids.edit', [
+            'bid' => $bid,
+            'levels' => $levels,
+            'categories' => $categories,
+        ]);
     }
 
-    /**
-     * @param  Request $request
-     * @param  Bid $bid
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Bid $bid)
     {
-        $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
-        ]);
-
-        $bid->update($request->all());
+        try {
+            $bid->update($request->all());
+        } catch (\Exception $e) {
+            dd($e);
+        }
 
         return redirect()->route('bids.index')
             ->with('success','Bid updated successfully');
     }
 
-    /**
-     * @param  Bid $bid
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Bid $bid)
     {
         try {
