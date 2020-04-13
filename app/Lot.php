@@ -13,6 +13,8 @@ class Lot extends Model
      */
     protected $table = 'lots';
 
+    protected $fillable = ['start_cost', 'current_cost', 'final_cost', 'status', 'order_id', 'user_id'];
+
     /**
      * Get the based order.
      */

@@ -25,6 +25,9 @@
                         <h2>
                             <bold><a href="{{ route('orders.index') }}">Orders</a></bold>
                         </h2>
+                        <h2>
+                            <bold><a href="{{ route('lots.index') }}">Lots</a></bold>
+                        </h2>
                 </div>
             </div>
         </div>
