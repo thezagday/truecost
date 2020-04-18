@@ -17,7 +17,7 @@
                                 <label for="description">Description</label>
                                 <input type="text" name="description" class="form-control" id="description" placeholder="Description">
                             </div>
-                            <input type="hidden" name="user_id" value="{{$current_user_id}}">
+                            <input type="hidden" name="user_id" value="{{ $current_user_id }}">
                             <div class="form-group">
                                 <label for="level">Level</label>
                                 <select class="form-control" id="level" name="level_id">
