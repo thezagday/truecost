@@ -28,4 +28,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('orders', 'OrderController');
     Route::resource('reviews', 'ReviewController');
     Route::resource('users', 'UserController');
+
+    Route::get('/auction', ['as' => 'auction.index', 'uses' => 'AuctionController@index']);
+    Route::get('/auction/show/{lot}', ['as' => 'auction.show', 'uses' => 'AuctionController@show']);
+    Route::post('/auction/reduce/{lot}', ['as' => 'auction.reduce', 'uses' => 'AuctionController@reducePrice']);
 });

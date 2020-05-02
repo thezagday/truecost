@@ -13,24 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <h2>
-                            <bold><a href="{{ route('categories.index') }}">Categories</a></bold>
-                        </h2>
-                        <h2>
-                            <bold><a href="{{ route('levels.index') }}">Levels</a></bold>
-                        </h2>
-                        <h2>
-                            <bold><a href="{{ route('bids.index') }}">Bids</a></bold>
-                        </h2>
-                        <h2>
-                            <bold><a href="{{ route('orders.index') }}">Orders</a></bold>
-                        </h2>
-                        <h2>
-                            <bold><a href="{{ route('lots.index') }}">Lots</a></bold>
-                        </h2>
-                        <h2>
-                            <bold><a href="{{ route('reviews.index') }}">Reviews</a></bold>
-                        </h2>
+                        <h2><bold><a href="{{ route('categories.index') }}">Categories</a></bold></h2>
+                        <h2><bold><a href="{{ route('levels.index') }}">Levels</a></bold></h2>
+                        <h2><bold><a href="{{ route('bids.index') }}">Bids</a></bold></h2>
+                        <h2><bold><a href="{{ route('orders.index') }}">Orders</a></bold></h2>
+                        <h2><bold><a href="{{ route('lots.index') }}">Lots</a></bold></h2>
+                        <h2><bold><a href="{{ route('auction.index') }}">Auction</a></bold></h2>
+                        <h2><bold><a href="{{ route('reviews.index') }}">Reviews</a></bold></h2>
                 </div>
             </div>
         </div>
