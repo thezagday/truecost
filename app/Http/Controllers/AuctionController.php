@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Lot;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AuctionController extends Controller
 {
     public function index()
     {
-        $lots = Lot::orderBy('id', 'desc')
+        $lots = Lot::where('end_time_at', '>', DB::raw('CURRENT_TIMESTAMP'))
+            ->orderBy('id', 'desc')
             ->paginate(10);
 
         return view('auction.index')->with('lots', $lots);

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Lot;
 use App\Order;
 use App\User;
+use Carbon\Carbon;
+use DateInterval;
 use Illuminate\Http\Request;
 
 class LotController extends Controller
@@ -31,7 +33,9 @@ class LotController extends Controller
     public function store(Request $request)
     {
         try {
-            Lot::create($request->all());
+            $lot = Lot::create($request->all());
+            $lot->end_time_at = (new Carbon($lot->created_at))->addHours($request->duration);
+            $lot->save();
         } catch (\Exception $e) {
             dd($e);
         }

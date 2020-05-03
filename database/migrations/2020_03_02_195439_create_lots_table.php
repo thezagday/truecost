@@ -22,6 +22,7 @@ class CreateLotsTable extends Migration
             $table->integer('order_id');
             $table->integer('user_id');
             $table->timestamps();
+            $table->timestamp('end_time_at')->nullable();
 
             $table->index('order_id');
             $table->index('user_id');

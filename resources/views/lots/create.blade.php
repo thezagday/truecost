@@ -44,6 +44,10 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="duration">Duration</label>
+                                <input type="text" name="duration" class="form-control" id="duration" placeholder="Duration(h)">
+                            </div>
                             <button type="submit" class="btn btn-primary">Create</button>
                         </form>
                     </div>
