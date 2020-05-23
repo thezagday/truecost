@@ -1,1 +1,0 @@
-C:\xampp\php\php.exe  D:\xampp\htdocs\truecost\auction_cron.php

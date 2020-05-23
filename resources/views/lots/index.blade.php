@@ -16,7 +16,7 @@
                                 <td>Final cost</td>
                                 <td>Status</td>
                                 <td>Order</td>
-                                <td>User</td>
+                                <td>Candidate</td>
                                 <td colspan = 3>Actions</td>
                             </tr>
                             </thead>
@@ -29,7 +29,7 @@
                                     <td>{{$lot->final_cost}}</td>
                                     <td>{{$lot->status}}</td>
                                     <td>{{$lot->order->bid->title}}</td>
-                                    <td>{{$lot->user_id}}</td>
+                                    <td>{{$lot->candidate->name}}</td>
                                     <td>
                                         <a href="{{ route('lots.edit', $lot->id) }}" class="btn btn-primary">Edit</a>
                                     </td>

@@ -1,0 +1,29 @@
+2020-05-23 11:57:32 
+2020-05-23 11:58:58 
+2020-05-23 12:07:21 
+2020-05-23 12:09:39 
+2020-05-23 12:10:37 
+2020-05-23 12:11:38 
+2020-05-23 12:31:17 From DealCreator 
+2020-05-23 12:31:38 From DealCreator 
+2020-05-23 12:32:37 From DealCreator 
+2020-05-23 12:35:37 From DealCreator 
+2020-05-23 12:53:07 From DealCreator 
+2020-05-23 12:54:20 From DealCreator 
+start completingLots 
+start completingLots 
+start createDeals 
+start completingLots 
+start createDeals 
+SQLSTATE[HY000]: General error: 1364 Field 'executor_id' doesn't have a default value (SQL: insert into `deals` (`status`, `lot_id`, `updated_at`, `created_at`) values (work, 1, 2020-05-23 13:53:15, 2020-05-23 13:53:15)) 
+finish cron 
+start completingLots 
+start createDeals 
+finish cron 
+start completingLots 
+start createDeals 
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'executor_id' cannot be null (SQL: insert into `deals` (`status`, `lot_id`, `executor_id`, `updated_at`, `created_at`) values (work, 1, ?, 2020-05-23 13:56:10, 2020-05-23 13:56:10)) 
+finish cron 
+start completingLots 
+start createDeals 
+finish cron 

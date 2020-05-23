@@ -18,6 +18,7 @@ class CreateReviewsTable extends Migration
             $table->string('title', 50);
             $table->text('body');
             $table->integer('user_id');
+            $table->integer('deal_id');
             $table->timestamps();
 
             $table->index('user_id');

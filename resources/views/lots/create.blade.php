@@ -37,8 +37,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="user">User</label>
-                                <select class="form-control" id="user" name="user_id">
+                                <label for="candidate">Candidate</label>
+                                <select class="form-control" id="candidate" name="candidate_id">
                                     @foreach($users as $user)
                                         <option value="{{ $user->id }}">{{ $user->name }}</option>
                                     @endforeach

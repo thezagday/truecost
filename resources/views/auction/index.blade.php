@@ -12,6 +12,7 @@
                                 <tr>
                                 <td>Current cost</td>
                                 <td>Order</td>
+                                <td>Candidate</td>
                                 <td colspan = 3>Actions</td>
                             </tr>
                             </thead>
@@ -20,6 +21,7 @@
                                 <tr>
                                     <td>{{$lot->current_cost}}</td>
                                     <td>{{$lot->order->bid->title}}</td>
+                                    <td>{{$lot->candidate->name}}</td>
                                     <td><a href="{{ route('auction.show', $lot->id) }}" class="btn btn-primary">Show</a></td>
                                 </tr>
                             @endforeach

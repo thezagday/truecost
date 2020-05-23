@@ -13,6 +13,8 @@ class Deal extends Model
      */
     protected $table = 'deals';
 
+    protected $fillable = ['status', 'lot_id', 'executor_id'];
+
     /**
      * Get the based lot.
      */

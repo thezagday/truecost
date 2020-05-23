@@ -20,12 +20,12 @@ class CreateLotsTable extends Migration
             $table->double('final_cost');
             $table->string('status');
             $table->integer('order_id');
-            $table->integer('user_id');
+            $table->integer('candidate_id');
             $table->timestamps();
             $table->timestamp('end_time_at')->nullable();
 
             $table->index('order_id');
-            $table->index('user_id');
+            $table->index('candidate_id');
         });
     }
 

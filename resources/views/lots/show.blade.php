@@ -29,8 +29,8 @@
                                 <input type="text" name="order_id" class="form-control" id="order" placeholder="Order" value="{{ $lot->order->bid->title }}">
                             </div>
                             <div class="form-group">
-                                <label for="user">User</label>
-                                <input type="text" name="user_id" class="form-control" id="user" placeholder="User" value="{{ $lot->user_id }}">
+                                <label for="candidate">Candidate</label>
+                                <input type="text" name="candidate_id" class="form-control" id="candidate" placeholder="Candidate" value="{{ $lot->candidate->name }}">
                             </div>
                         </form>
                     </div>

@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="user">User</label>
-                                <input type="text" name="user_id" class="form-control" id="user" placeholder="User" value="{{ $lot->user_id }}">
+                                <input type="text" name="candidate_id" class="form-control" id="candidate" placeholder="Candidate" value="{{ $lot->candidate->name }}">
                             </div>
                             <div class="form-group">
                                 <label for="offer">Your offer</label>

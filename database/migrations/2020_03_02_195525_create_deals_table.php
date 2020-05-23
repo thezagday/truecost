@@ -17,11 +17,10 @@ class CreateDealsTable extends Migration
             $table->increments('id');
             $table->string('status');
             $table->integer('lot_id');
-            $table->integer('review_id');
+            $table->integer('executor_id');
             $table->timestamps();
 
-            $table->index('lot_id');
-            $table->index('review_id');
+            $table->index('id');
         });
     }
 

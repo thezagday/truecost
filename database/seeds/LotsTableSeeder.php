@@ -20,9 +20,9 @@ class LotsTableSeeder extends Seeder
                 'final_cost' => 100,
                 'status' => 'active',
                 'order_id' => 1,
-                'user_id' => 1,
-                'created_at' => new Carbon('2020-01-05 00:00:00'),
-                'end_time_at' => (new Carbon('2020-01-05 00:00:00'))->addHours(2),
+                'candidate_id' => 2,
+                'created_at' => Carbon::now(),
+                'end_time_at' => (Carbon::now())->addHours(2),
             ]
         );
     }

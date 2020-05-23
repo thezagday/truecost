@@ -13,7 +13,7 @@ class Lot extends Model
      */
     protected $table = 'lots';
 
-    protected $fillable = ['start_cost', 'current_cost', 'final_cost', 'status', 'order_id', 'user_id'];
+    protected $fillable = ['start_cost', 'current_cost', 'final_cost', 'status', 'order_id', 'candidate_id'];
 
     /**
      * Get the based order.
@@ -29,5 +29,13 @@ class Lot extends Model
     public function deal()
     {
         return $this->hasOne('App\Deal');
+    }
+
+    /**
+     * Get candidate.
+     */
+    public function candidate()
+    {
+        return $this->belongsTo('App\User', 'candidate_id');
     }
 }

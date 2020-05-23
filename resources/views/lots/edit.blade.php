@@ -35,10 +35,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="user">User</label>
-                                <select class="form-control" id="user" name="user_id">
+                                <label for="user">Candidate</label>
+                                <select class="form-control" id="candidate" name="candidate_id">
                                     @foreach($users as $user)
-                                        <option value="{{ $user->id }}" @if ($user->id == $lot->user_id) {{ 'selected' }} @endif>{{ $user->name }}</option>
+                                        <option value="{{ $user->id }}" @if ($user->id == $lot->candidate_id) {{ 'selected' }} @endif>{{ $user->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

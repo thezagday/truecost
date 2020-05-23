@@ -13,7 +13,7 @@ class Review extends Model
      */
     protected $table = 'reviews';
 
-    protected $fillable = ['title', 'body', 'user_id'];
+    protected $fillable = ['title', 'body', 'user_id', 'deal_id'];
 
     /**
      * Get the based deal.

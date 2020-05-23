@@ -2,6 +2,10 @@
 
 namespace App\Console;
 
+use App\Services\DealCreator;
+use App\Services\Logger;
+use App\Services\LotCompleter;
+use DateTime;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -24,8 +28,16 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->call(function () {
+            $logger = new Logger();
+
+            $logger->log('start completingLots');
+            (new LotCompleter())->completingLots();
+            $logger->log('start createDeals');
+            (new DealCreator())->createDeals();
+            $logger->log('finish cron');
+
+        })->everyMinute();
     }
 
     /**
