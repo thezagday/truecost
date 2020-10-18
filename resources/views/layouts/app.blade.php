@@ -12,7 +12,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
     @yield('style')
 </head>
@@ -34,6 +33,5 @@
     });
     </script>
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/admin.js') }}"></script>
 </body>
 </html>

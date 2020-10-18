@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="sidebar">
-            <div class="sidebar-inner">
+        <div class="sidebar-inner">
                 <!-- ### $Sidebar Header ### -->
                 <div class="sidebar-logo">
                     <div class="peers ai-c fxw-nw">
@@ -34,6 +34,64 @@
 
                 <!-- ### $Sidebar Menu ### -->
                 <ul class="sidebar-menu scrollable pos-r">
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="categories">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="levels">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Levels</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="bids">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Bids</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="orders">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="lots">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Lots</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="auction">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Auction</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="reviews">
+                            <span class="icon-holder">
+                              <i class="c-brown-500 ti-email"></i>
+                            </span>
+                            <span class="title">Reviews</span>
+                        </a>
+                    </li>
+
+
                     <li class="nav-item mT-30 actived">
                         <a class="sidebar-link" href="dashboard">
                             <span class="icon-holder">
@@ -200,6 +258,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
+    </div>
     @yield('main')
 @endsection

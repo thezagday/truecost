@@ -20,3 +20,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+// try {
+//     window.$ = window.jQuery = require('jquery');
+// } catch (e) {}
+
+// Adminator
+require('./adminator/index');
