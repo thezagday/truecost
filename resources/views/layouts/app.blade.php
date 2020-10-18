@@ -12,8 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/loader.css') }}" rel="stylesheet">
 
-    @yield('style')
 </head>
 <body class="app">
     <div id='loader'>
@@ -24,14 +24,7 @@
         @yield('content')
     </div>
 
-    <script>
-        window.addEventListener('load', function load() {
-        const loader = document.getElementById('loader');
-        setTimeout(function() {
-            loader.classList.add('fadeOut');
-        }, 300);
-    });
-    </script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/loader.js') }}"></script>
 </body>
 </html>

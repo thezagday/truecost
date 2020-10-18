@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('admin.base')
 
-@section('content')
+@section('main')
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
