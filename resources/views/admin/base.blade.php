@@ -7,7 +7,7 @@
                 <div class="sidebar-logo">
                     <div class="peers ai-c fxw-nw">
                         <div class="peer peer-greed">
-                            <a class="sidebar-link td-n" href="/dashboard">
+                            <a class="sidebar-link td-n" href="/">
                                 <div class="peers ai-c fxw-nw">
                                     <div class="peer">
                                         <div class="logo">
@@ -255,7 +255,7 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+        </div>
     </div>
     <div class="page-container">
         <!-- ### $Topbar ### -->
@@ -445,7 +445,7 @@
                                 <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
                             </div>
                             <div class="peer">
-                                <span class="fsz-sm c-grey-900">John Doe</span>
+                                <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>
                             </div>
                         </a>
                         <ul class="dropdown-menu fsz-sm">
@@ -469,16 +469,20 @@
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                                <a href="javascript:void(0);" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700" id="logout">
                                     <i class="ti-power-off mR-10"></i>
                                     <span>Logout</span>
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
+
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
             <div id='mainContent'>
@@ -491,4 +495,12 @@
             <span>Copyright © 2019 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
         </footer>
     </div>
+@endsection
+
+@section('javascript')
+    <script>
+        $('#logout').click(function() {
+            document.getElementById('logout-form').submit();
+        });
+    </script>
 @endsection

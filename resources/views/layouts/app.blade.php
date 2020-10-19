@@ -26,5 +26,6 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/loader.js') }}"></script>
+    @yield('javascript')
 </body>
 </html>
