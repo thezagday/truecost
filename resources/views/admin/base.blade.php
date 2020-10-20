@@ -35,7 +35,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/categories">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-blue-500 ti-layers-alt"></i>
                             </span>
                             <span class="title">Categories</span>
                         </a>
@@ -43,7 +43,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/levels">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-brown-500 ti-bar-chart"></i>
                             </span>
                             <span class="title">Levels</span>
                         </a>
@@ -51,7 +51,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/bids">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-blue-500 ti-rocket"></i>
                             </span>
                             <span class="title">Bids</span>
                         </a>
@@ -59,7 +59,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/orders">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-deep-orange-500 ti-home"></i>
                             </span>
                             <span class="title">Orders</span>
                         </a>
@@ -67,7 +67,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/lots">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-deep-purple-500 ti-package"></i>
                             </span>
                             <span class="title">Lots</span>
                         </a>
@@ -75,7 +75,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/auction">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-indigo-500 ti-hummer"></i>
                             </span>
                             <span class="title">Auction</span>
                         </a>
@@ -83,7 +83,7 @@
                     <li class="nav-item">
                         <a class='sidebar-link' href="/reviews">
                             <span class="icon-holder">
-                              <i class="c-brown-500 ti-email"></i>
+                              <i class="c-blue-500 ti-comments-smiley"></i>
                             </span>
                             <span class="title">Reviews</span>
                         </a>

@@ -12,20 +12,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/loader.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('css/loader.css') }}" rel="stylesheet">--}}
 
 </head>
 <body class="app">
-    <div id='loader'>
-        <div class="spinner"></div>
-    </div>
+{{--    <div id='loader'>--}}
+{{--        <div class="spinner"></div>--}}
+{{--    </div>--}}
 
     <div id="app">
         @yield('content')
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/loader.js') }}"></script>
+{{--    <script src="{{ asset('js/loader.js') }}"></script>--}}
     @yield('javascript')
 </body>
 </html>
