@@ -9,8 +9,7 @@ class LevelController extends Controller
 {
     public function index()
     {
-        $levels = Level::orderBy('id', 'desc')
-            ->paginate(10);
+        $levels = Level::orderBy('id', 'desc')->paginate(10);
 
         return view('levels.index')->with('levels', $levels);
     }
@@ -28,8 +27,7 @@ class LevelController extends Controller
             dd($e);
         }
 
-        return redirect()->route('levels.index')
-            ->with('success','Level created successfully.');
+        return redirect()->route('levels.index')->with('success','Level created successfully.');
     }
 
     public function show(Level $level)
@@ -50,8 +48,7 @@ class LevelController extends Controller
             dd($e);
         }
 
-        return redirect()->route('levels.index')
-            ->with('success','Level updated successfully');
+        return redirect()->route('levels.index')->with('success','Level updated successfully');
     }
 
     public function destroy(Level $level)
@@ -62,7 +59,6 @@ class LevelController extends Controller
             dd($e);
         }
 
-        return redirect()->route('levels.index')
-            ->with('success','Level deleted successfully');
+        return redirect()->route('levels.index')->with('success','Level deleted successfully');
     }
 }

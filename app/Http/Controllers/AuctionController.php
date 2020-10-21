@@ -10,9 +10,7 @@ class AuctionController extends Controller
 {
     public function index()
     {
-        $lots = Lot::where('end_time_at', '>', Carbon::now())
-            ->orderBy('id', 'desc')
-            ->paginate(10);
+        $lots = Lot::where('end_time_at', '>', Carbon::now())->orderBy('id', 'desc')->paginate(10);
 
         return view('auction.index')->with('lots', $lots);
     }

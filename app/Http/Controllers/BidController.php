@@ -11,8 +11,7 @@ class BidController extends Controller
 {
     public function index()
     {
-        $bids = Bid::orderBy('id', 'desc')
-            ->paginate(10);
+        $bids = Bid::orderBy('id', 'desc')->paginate(10);
 
         return view('bids.index')->with('bids', $bids);
     }
@@ -38,8 +37,7 @@ class BidController extends Controller
             dd($e);
         }
 
-        return redirect()->route('bids.index')
-            ->with('success','Bid created successfully.');
+        return redirect()->route('bids.index')->with('success','Bid created successfully.');
     }
 
     public function show(Bid $bid)
@@ -67,8 +65,7 @@ class BidController extends Controller
             dd($e);
         }
 
-        return redirect()->route('bids.index')
-            ->with('success','Bid updated successfully');
+        return redirect()->route('bids.index')->with('success','Bid updated successfully');
     }
 
     public function destroy(Bid $bid)
@@ -79,7 +76,6 @@ class BidController extends Controller
             dd($e);
         }
 
-        return redirect()->route('bids.index')
-            ->with('success','Bid deleted successfully');
+        return redirect()->route('bids.index')->with('success','Bid deleted successfully');
     }
 }

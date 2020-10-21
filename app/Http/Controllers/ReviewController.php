@@ -9,8 +9,7 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $reviews = Review::orderBy('id', 'desc')
-            ->paginate(10);
+        $reviews = Review::orderBy('id', 'desc')->paginate(10);
 
         return view('reviews.index')->with('reviews', $reviews);
     }
@@ -32,8 +31,7 @@ class ReviewController extends Controller
             dd($e);
         }
 
-        return redirect()->route('reviews.index')
-            ->with('success','Review created successfully.');
+        return redirect()->route('reviews.index')->with('success','Review created successfully.');
     }
 
     public function show(Review $review)
@@ -54,8 +52,7 @@ class ReviewController extends Controller
             dd($e);
         }
 
-        return redirect()->route('reviews.index')
-            ->with('success','Review updated successfully');
+        return redirect()->route('reviews.index')->with('success','Review updated successfully');
     }
 
     public function destroy(Review $review)
@@ -66,7 +63,6 @@ class ReviewController extends Controller
             dd($e);
         }
 
-        return redirect()->route('reviews.index')
-            ->with('success','Review deleted successfully');
+        return redirect()->route('reviews.index')->with('success','Review deleted successfully');
     }
 }

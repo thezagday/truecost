@@ -10,8 +10,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::orderBy('id', 'desc')
-            ->paginate(10);
+        $orders = Order::orderBy('id', 'desc')->paginate(10);
 
         return view('orders.index')->with('orders', $orders);
     }
@@ -33,8 +32,7 @@ class OrderController extends Controller
             dd($e);
         }
 
-        return redirect()->route('orders.index')
-            ->with('success','Order created successfully.');
+        return redirect()->route('orders.index')->with('success','Order created successfully.');
     }
 
     public function show(Order $order)
@@ -60,8 +58,7 @@ class OrderController extends Controller
             dd($e);
         }
 
-        return redirect()->route('orders.index')
-            ->with('success','Order updated successfully');
+        return redirect()->route('orders.index')->with('success','Order updated successfully');
     }
 
     public function destroy(Order $order)
@@ -72,7 +69,6 @@ class OrderController extends Controller
             dd($e);
         }
 
-        return redirect()->route('orders.index')
-            ->with('success','Order deleted successfully');
+        return redirect()->route('orders.index')->with('success','Order deleted successfully');
     }
 }

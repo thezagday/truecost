@@ -6,15 +6,13 @@ use App\Lot;
 use App\Order;
 use App\User;
 use Carbon\Carbon;
-use DateInterval;
 use Illuminate\Http\Request;
 
 class LotController extends Controller
 {
     public function index()
     {
-        $lots = Lot::orderBy('id', 'desc')
-            ->paginate(10);
+        $lots = Lot::orderBy('id', 'desc')->paginate(10);
 
         return view('lots.index')->with('lots', $lots);
     }
@@ -40,8 +38,7 @@ class LotController extends Controller
             dd($e);
         }
 
-        return redirect()->route('lots.index')
-            ->with('success','Lot created successfully.');
+        return redirect()->route('lots.index')->with('success','Lot created successfully.');
     }
 
     public function show(Lot $lot)
@@ -69,8 +66,7 @@ class LotController extends Controller
             dd($e);
         }
 
-        return redirect()->route('lots.index')
-            ->with('success','Lot updated successfully');
+        return redirect()->route('lots.index')->with('success','Lot updated successfully');
     }
 
     public function destroy(Lot $lot)
@@ -81,7 +77,6 @@ class LotController extends Controller
             dd($e);
         }
 
-        return redirect()->route('lots.index')
-            ->with('success','Lot deleted successfully');
+        return redirect()->route('lots.index')->with('success','Lot deleted successfully');
     }
 }

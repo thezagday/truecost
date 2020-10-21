@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Bid;
 use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::orderBy('id', 'desc')
-            ->paginate(10);
+        $categories = Category::orderBy('id', 'desc')->paginate(10);
 
         return view('categories.index')->with('categories', $categories);
     }
@@ -30,8 +27,7 @@ class CategoryController extends Controller
             dd($e);
         }
 
-        return redirect()->route('categories.index')
-            ->with('success','Category created successfully.');
+        return redirect()->route('categories.index')->with('success','Category created successfully.');
     }
 
     public function show(Category $category)
@@ -52,8 +48,7 @@ class CategoryController extends Controller
             dd($e);
         }
 
-        return redirect()->route('categories.index')
-            ->with('success','Category updated successfully');
+        return redirect()->route('categories.index')->with('success','Category updated successfully');
     }
 
     public function destroy(Category $category)
@@ -64,7 +59,6 @@ class CategoryController extends Controller
             dd($e);
         }
 
-        return redirect()->route('categories.index')
-            ->with('success','Category deleted successfully');
+        return redirect()->route('categories.index')->with('success','Category deleted successfully');
     }
 }
