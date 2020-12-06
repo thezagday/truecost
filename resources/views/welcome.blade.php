@@ -530,7 +530,7 @@
 
 
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a9b5"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Пример текста. Кликните, чтобы выбрать текстовый блок. Кликните еще раз или сделайте двойной клик, чтобы начать редактирование текста.</p>
+        <p class="u-small-text u-text u-text-variant u-text-1">Copyright © 2020 truecost. All rights reserved.</p>
     </div></footer>
 <section class="u-backlink u-clearfix u-grey-80">
     <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
