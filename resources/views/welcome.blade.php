@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>truecost</title>
+    <link rel="shortcut icon" href="{{ asset('/images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('/css/welcome/nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/welcome/styles.css') }}" media="screen">
     <script class="u-script" type="text/javascript" src="{{ asset('/js/welcome/jquery.js') }}" defer=""></script>
