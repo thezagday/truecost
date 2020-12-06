@@ -88,6 +88,14 @@
                             <span class="title">Reviews</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class='sidebar-link' href="/users">
+                            <span class="icon-holder">
+                              <i class="c-blue-500 ti-user"></i>
+                            </span>
+                            <span class="title">Users</span>
+                        </a>
+                    </li>
 
 
                     <li class="nav-item mT-30 actived">
@@ -442,7 +450,7 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                             <div class="peer mR-10">
-                                <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+                                <img class="w-2r bdrs-50p" src="{{ asset('/images/zagday.jpg') }}" alt="Roman Zagday">
                             </div>
                             <div class="peer">
                                 <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>
@@ -456,7 +464,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                                <a href="{{ route('users.show', Auth::user()->id) }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                                     <i class="ti-user mR-10"></i>
                                     <span>Profile</span>
                                 </a>

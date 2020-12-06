@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,6 +18,12 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('reviews', 'ReviewController');
     Route::resource('users', 'UserController');
 
+    Route::get('/auction', ['as' => 'auction.index', 'uses' => 'AuctionController@index']);
+    Route::get('/auction/show/{lot}', ['as' => 'auction.show', 'uses' => 'AuctionController@show']);
+    Route::post('/auction/reduce/{lot}', ['as' => 'auction.reduce', 'uses' => 'AuctionController@reducePrice']);
+
+//    Route::get('/profile', ['as' => 'profile.index', 'uses' => 'AuctionController@index']);
+
     Route::get('/dashboard', function () { return view('admin.dashboard'); });
     Route::get('/basic-table', function () { return view('admin.basic-table'); });
     Route::get('/blank', function () { return view('admin.blank'); });
@@ -46,8 +41,4 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/404', function () { return view('admin.404'); });
     Route::get('/500', function () { return view('admin.500'); });
-
-    Route::get('/auction', ['as' => 'auction.index', 'uses' => 'AuctionController@index']);
-    Route::get('/auction/show/{lot}', ['as' => 'auction.show', 'uses' => 'AuctionController@show']);
-    Route::post('/auction/reduce/{lot}', ['as' => 'auction.reduce', 'uses' => 'AuctionController@reducePrice']);
 });
